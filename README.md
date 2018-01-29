@@ -7,32 +7,29 @@
 
 适合新学者的入手的第一个项目 ([演示Demo戳这里](https://courseselect.herokuapp.com/ ))，入门者可以在这个样本系统上增加更多的功能:
 
-* 处理选课冲突、控制选课人数
-* 统计选课学分，学位课等
-* 增加选课的开放、关闭功能
-* 自定义管理员后台
-* 基于OAuth的授权登陆
-* Excel格式的数据导入
-* 绑定用户邮箱（实现注册激活，忘记密码等）
-* 站内查找检索 （课程按分类查找，过滤等）
+*	多角色登陆（学生，老师，管理员）
+*	学生动态选课，退课
+*	老师动态增加，删除课程（使用Heroku的sendgrid服务）
+*	老师对课程下的学生添加、修改成绩
+*	处理选课冲突、控制选课人数
+*	统计选课学分，学位课等
+*	Excel格式的数据导入
+*	绑定用户邮箱（实现注册激活，忘记密码等）
+*	站内查找检索 （课程按分类查找，过滤等）
+*	学生注册选课系统
+*	学生查看个人课表
+*	选课打印
 
-### 目前功能：
-
-* 多角色登陆（学生，老师，管理员）
-* 学生动态选课，退课
-* 老师动态增加，删除课程
-* 老师对课程下的学生添加、修改成绩
-* 权限控制：老师和学生只能看到自己相关课程信息
 
 ### 截图
 
-<img src="/lib/screenshot1.png" width="700">  
+<img src="/lib/MainPage.png" width="700">  
 
-<img src="/lib/screenshot2.png" width="700">
+<img src="/lib/SumSocres.png" width="700">
 
-<img src="/lib/screenshot3.png" width="700">   
+<img src="/lib/Schedule.png" width="700">   
 
-<img src="/lib/screenshot4.png" width="700">
+<img src="/lib/Save.png" width="700">
 
 ## 说明
 
@@ -86,21 +83,10 @@ $ rails s
 账号中数字都可以替换成2,3...等等
 
 
-## Heroku云部署
+## 外网访问
 
-项目可直接在Heroku上免费部署
-
-1.fork此项目到自己Github账号下
-
-2.创建Heroku账号以及Heroku app
-
-3.将Heroku app与自己Github下的fork的项目进行连接
-
-4.下载配置[Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)命令行工具
-
-5.运行`heroku login`在终端登陆，检查与heroku app的远程连接情况`git config --list | grep heroku`，若未检查到相应的app，请看[这里](http://stackoverflow.com/questions/5129598/how-to-link-a-folder-with-an-existing-heroku-app)
-
-6.运行部署，详情[请戳这里](https://devcenter.heroku.com/articles/getting-started-with-rails4#rails-asset-pipeline)
+外网访问链接：
+http://111.230.236.207:3000/ 
 
 
 ## 测试
@@ -108,15 +94,13 @@ $ rails s
 本项目包含了部分的测试（integration/fixture/model test），测试文件位于/test目录下。运行测试：
 
 ```
-PENG-MacBook-Pro:IMS_sample PENG-mac$ rake test
-Run options: --seed 15794
 
 # Running:
 .........
 
-Finished in 1.202169s, 7.4865 runs/s, 16.6366 assertions/s.
+Finished in 2.33169s, 9.4123 runs/s, 18.34535 assertions/s.
 
-9 runs, 20 assertions, 0 failures, 0 errors, 0 skips
+7 runs, 0 assertions, 0 failures, 7 errors, 0 skips
 ```
 
 
