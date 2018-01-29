@@ -25,7 +25,7 @@
 
 <img src="/lib/MainPage.png" width="700">  
 
-<img src="/lib/SumSocres.png" width="700">
+<img src="/lib/SumScores.png" width="700">
 
 <img src="/lib/Schedule.png" width="700">   
 
