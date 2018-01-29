@@ -49,8 +49,8 @@
 在终端（MacOS或Linux）中执行以下代码
 
 ```
-$ git clone https://github.com/PENGZhaoqing/CourseSelect
-$ cd CourseSelect
+$ git clone https://github.com/Qiaomao/SelectCourselol.git
+$ cd SelectCourselol
 $ bundle install
 $ rake db:migrate
 $ rake db:seed
